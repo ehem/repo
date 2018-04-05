@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+	<remote  name="github"
+		fetch=".."
+	/>
+
+	<remote  name="private"
+		fetch="ssh://git@github.com"
+	/>
+
+	<remote name="yocto"
+		fetch="https://code.qt.io/yocto/"
+	/>
+
+	<default sync-c="true" sync-tags="true" />
+
+
+	<!-- Fetch all the needed layers in src/ -->
+	<project path="src/oe-core" name="../openembedded/openembedded-core.git" revision="rocko" remote="github" />
+	<project path="src/oe-core/bitbake" name="../openembedded/bitbake.git" revision="1.36" remote="github" />
+	<project path="src/meta-openembedded" name="../openembedded/meta-openembedded.git" revision="rocko" remote="github" />
+	<project path="src/meta-qt5" name="meta-qt5.git" remote="yocto" revision="5.10" />
+	<project path="src/meta-smartphone" name="../shr-distribution/meta-smartphone.git" revision="rocko" remote="github" />
+
+	<project path="." name="asteroid.git" revision="master" remote="github" />
+	<project path="src/meta-asteroid" name="meta-asteroid.git" revision="master" remote="github" />
+	<project path="src/meta-anthias-hybris" name="meta-anthias-hybris.git" remote="github" revision="master" />
+	<project path="src/meta-bass-hybris" name="meta-bass-hybris.git" remote="github" revision="master" />
+	<project path="src/meta-dory-hybris" name="meta-dory-hybris" remote="github" revision="master" />
+
+	<project path="src/meta-lenok-hybris" name="meta-lenok-hybris.git" remote="github" revision="master" />
+	<project path="src/meta-sparrow-hybris" name="meta-sparrow-hybris.git" remote="github" revision="master" />
+	<project path="src/meta-sprat-hybris" name="meta-sprat-hybris.git" remote="github" revision="master" />
+	<project path="src/meta-swift-hybris" name="meta-swift-hybris.git" remote="github" revision="master" />
+	<project path="src/meta-tetra-hybris" name="meta-tetra-hybris.git" remote="github" revision="master" />
+	<project path="src/meta-wren-hybris" name="meta-wren-hybris.git" remote="github" revision="master" />
+
+</manifest>
